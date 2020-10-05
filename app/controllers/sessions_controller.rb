@@ -1,0 +1,43 @@
+class SessionsController < ApplicationController
+
+    before_action :redirect_if_logged_in, except: [:destroy]
+  
+    def new
+      # @errors = []
+      # @customer = Customer.new
+    end
+  
+    def create
+      @customer = Customer.find_by(username: params[:customer][:username])
+      if @customer && @customer.authenticate(params[:customer][:password])
+        session[:customer_id] = @customer.id
+        redirect_to artists_path
+      else
+        @errors = ["Username or password incorrect"]
+        render :new
+      end
+    end
+  
+    def destroy
+      session.clear
+      redirect_to '/'
+    end
+  
+    def create_with_google
+      customer = Customer.find_or_create_by(username: auth["email"]) do |u|
+          u.password = 'password'
+      end
+      customer.save
+      session[:customer_id] = customer.id
+  
+      redirect_to artists_path
+    end
+  
+    private
+  
+    def auth
+      request.env['omniauth.auth']["info"]
+    end
+  
+  end
+  
