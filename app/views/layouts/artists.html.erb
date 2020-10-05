@@ -1,0 +1,8 @@
+<body>
+  <h2>Artists Layout</h2>
+  <%=link_to "All artists", artists_path%>
+  <%=link_to "My Pantry", customer_artists_path(current_customer)%>
+  <%=link_to "New artist", new_artist_path%>
+  <%=link_to "New appointment", new_appointment_path%>
+  <%= yield %>
+</body>

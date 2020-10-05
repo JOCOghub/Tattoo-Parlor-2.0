@@ -1,0 +1,12 @@
+<h1>artist</h1>
+
+<%=@artist.name%><br><br>
+
+<%= render partial: "appointments/appointments", locals: {appointments: @artist.appointments, index: false} %>
+<br><br>
+
+<%= link_to "Add artist to Pantry", new_artist_appointment_path(@artist) %><br><br>
+
+<%=link_to "Edit", edit_artist_path(@artist)%><br><br>
+
+<%=button_to "Delete", @artist, method: :delete %>
