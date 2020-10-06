@@ -1,3 +1,6 @@
-<%appointments.each do |m|%>
-  <li><%=m.appointment_time%>  <%= show_item_name(m, index)%></li>
+<%appointments.each do |a|%>
+  <li><%=a.appointment_time%> <br> 
+  <%=a.artist_name%><br>
+  ---------------------
+  </li>
 <%end%>

@@ -24,13 +24,13 @@ class SessionsController < ApplicationController
     end
   
     def create_with_google
-      customer = Customer.find_or_create_by(username: auth["email"]) do |u|
-          u.password = 'password'
+      customer = Customer.find_or_create_by(username: auth["email"]) do |c|  
+        c.password = SecureRandom.hex
       end
       customer.save
       session[:customer_id] = customer.id
   
-      redirect_to artists_path
+      redirect_to appointments_path
     end
   
     private

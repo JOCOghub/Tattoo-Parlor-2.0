@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     resources :appointments
   end
 
+  resources :customers do 
+    resources :appointments
+  end   
+
   resources :appointments
 
   get '/signup', to: "customers#new"

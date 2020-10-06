@@ -1,7 +1,7 @@
 module AppointmentsHelper
 
-    def show_artist_name(m, index)
-      m.artist.name if index
+    def artist_name(appointment)
+      appointment.artist.name
     end
   
     def form_url_helper(artist)
