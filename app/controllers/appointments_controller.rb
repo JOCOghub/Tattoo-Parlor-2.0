@@ -41,12 +41,16 @@ class AppointmentsController < ApplicationController
     
    def update
      if @appointment.update(appointment_params)
-        redirect_to appointments_path(@appointment)
+        redirect_to appointments_path#might need current_customer
      else
         render :edit
      end 
    end  
 
+   def destroy
+      @appointment.destroy
+      redirect_to appointments_path
+   end  
     private
   
     def set_appointment
