@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     end
   
     def redirect_if_logged_in
-      redirect_to '/artists' if current_customer
+      redirect_to customer_appointments_path if current_customer
     end
   
     def current_customer

@@ -4,12 +4,7 @@ class ArtistsController < ApplicationController
     before_action :set_artist, except: [:new, :create, :index]
     before_action :require_login
   
-    def index
-      if params[:customer_id]
-        @artists = Customer.find_by(id: params[:customer_id]).artists
-      else
-        @artists = Artist.all
-      end
+    def index 
     end
   
     def show

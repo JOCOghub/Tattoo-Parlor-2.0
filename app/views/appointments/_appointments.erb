@@ -1,6 +1,6 @@
-<%appointments.each do |a|%>
-  <li><%=a.appointment_time%> <br> 
-  <%=a.artist_name%><br>
+<%@appointments.each do |a|%>
+  <li><%=link_to a.appointment_time, edit_appointment_path(a)%> <br> 
+  <%= a.artist_name%><br>
   ---------------------
   </li>
 <%end%>
