@@ -1,11 +1,10 @@
 <h1>appointment</h1>
 
-<%=@appointment.name%><br><br>
+<%=@appointment%><br><br>
 
-<%= render partial: "appointments/appointments", locals: {artists: @appointment.artists, index: false} %>
+ <!--<%= render partial: "appointments/appointments", locals: {appointments: @appointments, index: false} %>-->
+<%=render 'form'%>
 <br><br>
-
-<%= link_to "Add appointment to Pantry", new_appointment_appointment_path(@appointment) %><br><br>
 
 <%=link_to "Edit", edit_appointment_path(@appointment)%><br><br>
 

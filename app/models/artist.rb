@@ -1,6 +1,6 @@
 class Artist < ApplicationRecord
 
-    has_many :appointments
+    has_many :appointments, dependent: :destroy 
     has_many :customers, through: :appointments
     # validates :name, {presence: {message: "!!!!!!!!!!not blank!!!!!!"}, uniqueness: {message: "must be unique!!!!!"}}
     validates_presence_of :name

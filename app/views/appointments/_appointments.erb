@@ -1,5 +1,5 @@
-<%@appointments.each do |a|%>
-  <li><%=link_to a.appointment_time, edit_appointment_path(a)%> <br> 
+<%@appointments.each.with_index do |a, index|%>
+  <li><%=index + 1%>. <%=link_to a.appointment_time, appointment_path(a)%> <br> 
   <%= a.artist_name%><br>
   ---------------------
   </li>
