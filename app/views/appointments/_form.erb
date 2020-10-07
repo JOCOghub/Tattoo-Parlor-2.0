@@ -1,14 +1,15 @@
 <%=form_for @appointment, url: form_url_helper(@artist) do |f|%>
   <%=f.label :time%>
   <%=f.date_field :appointment_time %>
-  
+   <%=f.submit%>
+   <br>
   <% if !@artist %>
-    <%=f.label :artist %><br>
+    <br>
     <%=f.fields_for :artist do |i|%>
-      <%=i.label :name %>
+      <%=i.label :Artist %>
       <%=i.text_field :name %>
     <%end%>
   <%end%>
-  <%=f.submit%>
+ 
 
 <%end%>
