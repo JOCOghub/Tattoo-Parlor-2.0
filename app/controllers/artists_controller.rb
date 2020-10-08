@@ -16,7 +16,7 @@ class ArtistsController < ApplicationController
     def create
       @artist = Artist.create(artist_params)
       if @artist.save
-        redirect_to artist_path(@artist)
+        redirect_to customer_appointments_path(current_customer)
       else
         # @errors = @artist.errors.full_messages
         render :new
