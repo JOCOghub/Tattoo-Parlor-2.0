@@ -7,8 +7,6 @@ class ArtistsController < ApplicationController
     def index 
     end
   
-    def show
-    end
   
     def new
       @artist = Artist.new
@@ -25,6 +23,10 @@ class ArtistsController < ApplicationController
       end
     end
   
+    def show
+      @artists = Artist.all
+    end
+
     def edit
     end
   

@@ -1,13 +1,2 @@
-<%=form_for @artist do |f| %>
-  <%= f.label "Name:" %>
-  <%= f.text_field :name %><br>
-
-  <%=f.label "appointments" %><br>
-  <%=f.fields_for :appointments do |m|%>
-    <%= m.hidden_field :customer_id%>
-    <%=m.label :time%>
-    <%=m.date_field :appointment_time %><br>
-  <%end%>
-  <%=f.submit%>
-<%end%>
+<%= render 'form' %>
 
