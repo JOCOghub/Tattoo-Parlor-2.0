@@ -1,8 +1,8 @@
+
 <%=form_for @appointment do |f|%>
   <%=f.label :time%>
   <%=f.date_field :appointment_time %>
-   <%=f.submit%>
-   <br>
+   
   <% if !@artist %>
     <br>
     <%=f.fields_for :artist do |i|%>
@@ -10,7 +10,8 @@
       <%=i.text_field :name %>
     <%end%>
   <%end%>
- 
+  <br>
+ <%=f.submit "Book Appointment"%>
 
 <%end%>
 <!--, url: form_url_helper(@artist)-->
