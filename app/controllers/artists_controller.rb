@@ -34,7 +34,7 @@ class ArtistsController < ApplicationController
       if @artist.update(artist_params)
         redirect_to artist_path(@artist)
       else
-        # @errors = @artist.errors.full_messages
+        #  @errors = @artist.errors.full_messages
         render :edit
       end
     end

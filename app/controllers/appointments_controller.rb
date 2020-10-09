@@ -24,11 +24,15 @@ class AppointmentsController < ApplicationController
     end
   
     def create
-      a = Appointment.new(appointment_params)
-      a.customer = current_customer
-      a.artist_id = params[:artist_id]
-      a.save
-      redirect_to customer_appointments_path(current_customer)
+      @appointment = Appointment.new(appointment_params)
+      @appointment.customer = current_customer
+      @appointment.artist_id = params[:artist_id]
+      if @appointment.save
+        redirect_to customer_appointments_path(current_customer)
+      else 
+        #@errors = @appointment.errors.full_messages
+        render :new
+      end 
     end
    
    def show 
