@@ -4,7 +4,25 @@ class Artist < ApplicationRecord
     has_many :customers, through: :appointments
     # validates :name, {presence: {message: "!!!!!!!!!!not blank!!!!!!"}, uniqueness: {message: "must be unique!!!!!"}}
     validates_presence_of :name
-  
+    validate :active_artist?
+
+  WORKING_ARTISTS = [
+    /Rebecca Taylor/i,
+    /Megan Blaese/i,
+    /Luke Wallace/i,
+    /Nathaniel Knight/i,
+    /Declan Kim/i,
+    /Jackson Garcia/i,
+    /Sean Jones/i
+  ]
+   
+  def active_artist?
+    if WORKING_ARTISTS.none? { |art| art.match name }
+      errors.add(:name, "Artist must be employee here!")
+    end
+  end
+
+
     validate :is_title_case
   
     before_validation :make_title_case
