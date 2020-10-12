@@ -5,7 +5,7 @@ class AppointmentsController < ApplicationController
   
     def index
       if params[:search]
-        @appointments = Appointment.appointment_time_search(params[:search])
+        @appointments = Appointment.time_search(params[:search])
         #render show?
       elsif current_customer
         @appointments = current_customer.appointments

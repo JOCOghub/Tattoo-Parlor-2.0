@@ -6,7 +6,7 @@ class Appointment < ApplicationRecord
 
   validates_presence_of :appointment_time
 
-   scope :appointment_time_search, -> (search) { where("quantity >= ?", search) }
+   scope :time_search, -> (search) { where("appointment_time = ?", search) }
 
   # def artist_attributes=(att)
   #

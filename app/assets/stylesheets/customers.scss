@@ -1,3 +1,25 @@
 // Place all the styles related to the Customeers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+    font: 100% Helvetica, sans-serif;
+    color: rgb(161, 26, 26);
+  }
+
+  h2 {
+    font: 100% Helvetica, sans-serif;
+    color: rgb(170, 101, 101);
+  }
+
+  li {
+    font: 100% Helvetica, sans-serif;
+    color: #333;
+  }
+
+//   style{
+//     background:url('rails.jpg') no-repeat center center fixed; 
+//     -webkit-background-size:cover;
+//     -moz-background-size:cover;
+//     -o-background-size:cover;
+//       background-size:cover;
+//    }
