@@ -3,8 +3,6 @@ class SessionsController < ApplicationController
     before_action :redirect_if_logged_in, except: [:destroy]
   
     def new
-      # @errors = []
-      # @customer = Customer.new
     end
   
     def create
