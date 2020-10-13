@@ -3,18 +3,51 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h1 {
     font: 100% Helvetica, sans-serif;
-    color: rgb(161, 26, 26);
+    display: flex;
+    color: hsl(0, 72%, 37%);
+    background-color: rgb(56, 54, 54);
+    background-clip: content-box;
+    margin-left: 175px;
+    margin-right: 175px;
+    border-radius: 3px;
+    font-weight: 800;
+    font-size: 50px;
+    justify-content: center;
   }
 
-  h2 {
+h2 {
     font: 100% Helvetica, sans-serif;
     color: rgb(170, 101, 101);
-  }
+    background-color: cornsilk;
+    margin-left: 266px;
+    margin-right: 266px;
+    border-radius: 3px;
+    display: flex;
+    font-weight: 800;
+    font-size: 45px;
+    justify-content: center;
+}
 
-  li {
+.artist-names {
     font: 100% Helvetica, sans-serif;
     color: #333;
-  }
+    background-color: cornsilk;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+    display: flex;
+    font-weight: 900;
+    font-size: 22px;
+    justify-content: space-between;
+}
+
+body{
+    background-image: url(rails.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
 
 //   style{
 //     background:url('rails.jpg') no-repeat center center fixed; 

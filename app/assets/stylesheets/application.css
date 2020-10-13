@@ -16,3 +16,29 @@
  .field_with_errors input {
     border-color: red;
   }
+
+  .functional-hyperlinks ul li{
+    font: 100% Helvetica, sans-serif;
+    color: #333;
+    background-color: rgb(228, 208, 130);
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 3px;
+    display: flex;
+    font-weight: 900;
+    font-size: 22px;
+    justify-content: center;
+  }
+
+  .log-in-hyperlinks ul li { 
+    font: 100% Helvetica, sans-serif;
+    color: #333;
+    background-color: rgb(228, 208, 130);
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 3px;
+    display: flex;
+    font-weight: 900;
+    font-size: 22px;
+    justify-content: center;
+  }
