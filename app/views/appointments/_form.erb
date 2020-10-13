@@ -3,7 +3,7 @@
 
 <%=form_for @appointment do |f|%>
   <%=f.label :time%>
-  <%=f.date_field :appointment_time %>
+  <%=f.datetime_field :appointment_time %>
    
   <% if !@artist %>
     <br>

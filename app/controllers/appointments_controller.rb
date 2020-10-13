@@ -6,7 +6,6 @@ class AppointmentsController < ApplicationController
     def index
       if params[:search]
         @appointments = Appointment.time_search(params[:search])
-        #render show?
       elsif current_customer
         @appointments = current_customer.appointments
         @artists = current_customer.artists
@@ -30,7 +29,6 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         redirect_to customer_appointments_path(current_customer)
       else 
-        #@errors = @appointment.errors.full_messages
         render :new
       end 
     end
@@ -45,7 +43,7 @@ class AppointmentsController < ApplicationController
     
    def update
      if @appointment.update(appointment_params)
-        redirect_to appointments_path#might need current_customer
+        redirect_to appointments_path
      else
         render :edit
      end 

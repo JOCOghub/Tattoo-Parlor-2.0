@@ -13,9 +13,7 @@ class CustomersController < ApplicationController
       if @customer.save
         session[:customer_id] = @customer.id
         redirect_to customer_appointments_path(current_customer)
-        # redirect_to customer_path(@customer)
       else
-        # @errors = @customer.errors.full_messages
         render :new
       end
     end

@@ -6,15 +6,7 @@ class Appointment < ApplicationRecord
 
   validates_presence_of :appointment_time
 
-   scope :time_search, -> (search) { where("appointment_time = ?", search) }
-
-  # def artist_attributes=(att)
-  #
-  # end
-
-  # def self.quantity_search(search)
-  #   self.where("quantity >= ?", search)
-  # end
+   scope :time_search, -> (search) { where("appointment_time LIKE ?", "%" + search.strip + "%") }
 
   def artist_name=(name)
     self.artist = Artist.find_or_create_by(name: name)
@@ -25,3 +17,14 @@ class Appointment < ApplicationRecord
   end
 
 end
+
+
+
+
+# def artist_attributes=(att)
+  #
+  # end
+
+  # def self.quantity_search(search)
+  #   self.where("quantity >= ?", search)
+  # end
