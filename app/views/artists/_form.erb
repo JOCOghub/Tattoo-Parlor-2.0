@@ -8,7 +8,7 @@
   <%=f.fields_for :appointments do |m|%>
     <%= m.hidden_field :customer_id%>
     <%=m.label :time%>:
-    <%=m.date_field :appointment_time %>
+    <%=m.datetime_field :appointment_time %>
   <%end%>
   <br>
  <%=f.submit "Book Artist"%>

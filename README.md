@@ -1,5 +1,5 @@
 # Tattoo-Parlor
-This Rails application represents an appointment web app for a Tattoo Parlor. This can be slightly modified for a Doctor's office or any other buisness that requires appointments. This application has full user profile capabilities such as creating a profile, booking an appointment associated with a specific tattoo artist, and the user can edit or delete that appointment. There is also an index page for a user to view all of their appointments.
+This Rails application represents an appointment web app for a Tattoo Parlor. This can be slightly modified for a Doctor's office or any other buisness that requires appointments. This application has full user profile capabilities such as creating a profile, booking an appointment associated with a specific tattoo artist, and the user can edit or delete that appointment. There is also an index page for a user to view all of their appointments. If a use wants to search or a specific appoibntment of theirs there is a search bar that allows them to do so.
 
 ## Installation
 Clone this repository to run.
