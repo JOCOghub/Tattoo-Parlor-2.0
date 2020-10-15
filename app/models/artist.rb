@@ -56,11 +56,6 @@ class Artist < ApplicationRecord
     def make_title_case
       self.name = self.name.titlecase
     end
-    # def name_presence
-    #   if name == nil || name == "" || name == " "
-    #     errors.add(:name, "cannot be empty!!!")
-    #   end
-    # end
-  
+    
   
   end
