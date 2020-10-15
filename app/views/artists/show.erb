@@ -2,7 +2,7 @@
 
 <%=@artist.name%><br><br>
 <%= render 'form'%>
-<!--<%= render partial: "appointments/appointments", locals: {appointments: @artist.appointments, index: false} %>-->
-<br><br>
 
+<div class="delete-button">
 <%=button_to "Delete", @artist, method: :delete %>
+</div>

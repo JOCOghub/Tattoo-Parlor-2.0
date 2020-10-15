@@ -1,17 +1,17 @@
 <div class="errors">
 <%=render partial: "application/errors", locals: {errors: @artist.errors.full_messages} %>
 </div>
+
+<div class="artist-form">
 <%=form_for @artist do |f| %>
   <%= f.label "Artist:" %>
   <%= f.text_field :name %> 
-
   <br>
   <%=f.fields_for :appointments do |m|%>
     <%= m.hidden_field :customer_id%>
     <%=m.label :time%>:
     <%=m.datetime_field :appointment_time %>
   <%end%>
-  <br>
  <%=f.submit "Book Artist"%>
-  
 <%end%>
+</div>

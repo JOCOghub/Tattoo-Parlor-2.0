@@ -1,6 +1,8 @@
 <div class="errors">
 <%=render partial: "application/errors", locals: {errors: @appointment.errors.full_messages} %>
 </div>
+
+<div class="appointment-form">
 <%=form_for @appointment do |f|%>
   <%=f.label :time%>
   <%=f.datetime_field :appointment_time %>
@@ -12,7 +14,6 @@
       <%=a.text_field :name %>
     <%end%>
   <%end%>
-  <br>
  <%=f.submit "Book Appointment"%>
-
 <%end%>
+</div>

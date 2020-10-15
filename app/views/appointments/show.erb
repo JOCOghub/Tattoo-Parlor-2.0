@@ -1,10 +1,8 @@
 <h1>appointment</h1>
 
-
-
- <!--<%= render partial: "appointments/appointments", locals: {appointments: @appointments, index: false} %>-->
 <%=render 'form'%>
-<br><br>
+
+<div class="delete-button">
 <%=button_to "Delete", @appointment, method: :delete %>
-<!--<%=link_to "Edit", edit_appointment_path(@appointment)%><br><br>-->
+</div>
 
