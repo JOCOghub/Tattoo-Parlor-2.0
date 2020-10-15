@@ -42,3 +42,10 @@
     font-size: 22px;
     justify-content: center;
   }
+
+  .errors{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(56, 8, 230);
+  }

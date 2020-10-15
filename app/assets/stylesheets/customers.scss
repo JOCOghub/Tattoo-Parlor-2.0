@@ -4,8 +4,8 @@
 h1 {
     font: 100% Helvetica, sans-serif;
     display: flex;
-    color: hsl(0, 72%, 37%);
-    background-color: rgb(56, 54, 54);
+    color: hsl(0, 85%, 51%);
+    background-color: rgb(143, 87, 248);
     background-clip: content-box;
     margin-left: 175px;
     margin-right: 175px;
@@ -48,11 +48,23 @@ body{
     padding: 0;
 }
 
+  .user-form{
+         font: 100% Helvetica, sans-serif;
+         color: #333;
+         background-color: cornsilk;
+         margin-left: 400px;
+         margin-right: 610px;
+         border-radius: 3px;
+         display: flex;
+         font-weight: 900;
+         font-size: 22px;
+         justify-content: center;
+         }
 
-//   style{
-//     background:url('rails.jpg') no-repeat center center fixed; 
-//     -webkit-background-size:cover;
-//     -moz-background-size:cover;
-//     -o-background-size:cover;
-//       background-size:cover;
-//    }
+      .customer-button {  
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        border-radius: 3px;        
+         }
+    

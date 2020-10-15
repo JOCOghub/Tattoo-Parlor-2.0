@@ -1,8 +1,9 @@
 <h1>Login</h1>
+<div class="errors">
 <%=render partial: "application/errors", locals: {errors: @errors || [] } %>
+</div>
 
-
-
+<div class="session-form">
 <%=form_for :customer do |f| %>
   <%=f.label :username %>
   <%=f.text_field :username %>
@@ -10,3 +11,4 @@
   <%=f.password_field :password %>
   <%=f.submit "Login"%>
 <%end%>
+</div>

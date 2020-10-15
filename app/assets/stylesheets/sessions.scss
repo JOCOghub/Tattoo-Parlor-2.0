@@ -1,3 +1,23 @@
 .field_with_errors input {
     border-color: red;
   }
+
+  .session-form{
+    font: 100% Helvetica, sans-serif;
+    color: #333;
+    background-color: cornsilk;
+    margin-left: 400px;
+    margin-right: 612px;
+    border-radius: 3px;
+    display: flex;
+    font-weight: 900;
+    font-size: 22px;
+    justify-content: center;
+    }
+
+    // .session-button {  
+    //   display: flex;
+    //   justify-content: center;
+    //   height: 30px;
+    //   border-radius: 3px;
+    //   }

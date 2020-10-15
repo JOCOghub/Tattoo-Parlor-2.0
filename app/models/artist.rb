@@ -2,7 +2,6 @@ class Artist < ApplicationRecord
 
     has_many :appointments, dependent: :destroy 
     has_many :customers, through: :appointments
-    # validates :name, {presence: {message: "!!!!!!!!!!not blank!!!!!!"}, uniqueness: {message: "must be unique!!!!!"}}
     validates_presence_of :name
     validate :active_artist?
 
@@ -18,7 +17,7 @@ class Artist < ApplicationRecord
    
   def active_artist?
     if WORKING_ARTISTS.none? { |art| art.match name }
-      errors.add(:name, "Artist must be employee here!")
+      errors.add(:name, "must be that of employee here!")
     end
   end
 

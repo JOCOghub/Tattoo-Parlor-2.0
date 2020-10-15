@@ -1,15 +1,15 @@
-
+<div class="errors">
 <%=render partial: "application/errors", locals: {errors: @appointment.errors.full_messages} %>
-
+</div>
 <%=form_for @appointment do |f|%>
   <%=f.label :time%>
   <%=f.datetime_field :appointment_time %>
    
   <% if !@artist %>
     <br>
-    <%=f.fields_for :artist do |i|%>
-      <%=i.label :Artist %>
-      <%=i.text_field :name %>
+    <%=f.fields_for :artist do |a|%>
+      <%=a.label :Artist %>
+      <%=a.text_field :name %>
     <%end%>
   <%end%>
   <br>
