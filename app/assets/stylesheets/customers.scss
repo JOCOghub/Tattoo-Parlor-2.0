@@ -2,13 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h1 {
-    font: 100% Helvetica, sans-serif;
+    font-family: 'Apple chancery', cursive;
     display: flex;
-    color: hsl(0, 85%, 51%);
+    color: hsl(9, 98%, 50%);
     background-color: rgb(143, 87, 248);
     background-clip: content-box;
-    margin-left: 175px;
-    margin-right: 175px;
+    margin-left: 290px;
+    margin-right: 215px;
     border-radius: 3px;
     font-weight: 800;
     font-size: 50px;
@@ -16,7 +16,7 @@ h1 {
   }
 
 h2 {
-    font: 100% Helvetica, sans-serif;
+    font-family: 'Apple chancery', cursive;
     color: rgb(170, 101, 101);
     background-color: cornsilk;
     margin-left: 266px;
@@ -29,8 +29,8 @@ h2 {
 }
 
 .artist-names {
-    font: 100% Helvetica, sans-serif;
-    color: #333;
+    font-family: 'Apple chancery', cursive;
+    color: rgb(122, 3, 151);
     background-color: cornsilk;
     margin-left: 20px;
     margin-right: 10px;
